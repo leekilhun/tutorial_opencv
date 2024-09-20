@@ -1,0 +1,17 @@
+주요 시스템 변수
+${workspaceFolder}: 현재 작업 중인 워크스페이스 폴더의 경로
+${workspaceFolderBasename}: 현재 워크스페이스 폴더의 이름
+${file}: 현재 열려 있는 파일의 경로
+${fileWorkspaceFolder}: 현재 열려 있는 파일이 속한 워크스페이스 폴더의 경로
+${relativeFile}: 워크스페이스 폴더에 상대적인 현재 열려 있는 파일의 경로
+${relativeFileDirname}: 워크스페이스 폴더에 상대적인 현재 열려 있는 파일의 디렉토리 이름
+${fileBasename}: 현재 열려 있는 파일의 이름 (확장자 포함)
+${fileBasenameNoExtension}: 현재 열려 있는 파일의 이름 (확장자 제외)
+${fileExtname}: 현재 열려 있는 파일의 확장자
+${fileDirname}: 현재 열려 있는 파일의 디렉토리 경로
+${cwd}: VS Code가 시작될 때의 현재 작업 디렉토리
+${lineNumber}: 활성 파일에서 현재 선택된 줄 번호
+${selectedText}: 활성 파일에서 현재 선택된 텍스트
+${execPath}: 실행 중인 VS Code 실행 파일의 경로
+${defaultBuildTask}: 기본 빌드 작업의 이름
+${pathSeparator}: 운영 체제에서 파일 경로를 구분하는 문자 (/ 또는 \\)

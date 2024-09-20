@@ -1,0 +1,60 @@
+{
+    "version": "2.0.0",
+    "windows": {
+        "options": {
+            "shell": {
+                "executable": "cmd.exe",
+                "args": [
+                    "/C",
+                    "\"C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/VsDevCmd.bat\"",
+                    "-arch=x86",
+                    "&&"
+                ]
+            }
+        }
+    },
+
+    "tasks": [
+        {
+            "label": "CMake: configure",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-S",
+                "${config:uv_cwd}",
+                "-B",
+                "${config:uv_cwd}/build",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Generated task by CMake Tools extension"
+        },
+        {
+            "label": "CMake: build",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${config:uv_cwd}/build",
+                "-j14"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Generated task by CMake Tools extension"
+        },
+        {
+            "label": "Run Executable",
+            "type": "shell",
+            "command": "${config:uv_cwd}/build/Debug/${config:uv_name}.exe",  // Debug 모드 실행 파일 경로
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
